@@ -122,3 +122,21 @@ h1{
 .notification-container.show{
     transform:translateY(-50px);
 }
+
+.text-container {
+    visibility: hidden;
+}
+
+
+@media(max-width:600px){
+    .text-container{
+        width:80%;
+        visibility:visible;
+    }
+    .text-container input{
+        width:100%;
+        padding:8px 10px;
+        border-radius:5px;
+        border:1px solid #CCC;
+    }
+}
