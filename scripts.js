@@ -63,6 +63,7 @@ function showNotification(){
 txtUserInput.addEventListener("change",e=>{
     
         const letter=txtUserInput.value;
+        console.log(letter);
         if(selectedWord.includes(letter)){
             if(!correctLetters.includes(letter)){
                 correctLetters.push(letter);
@@ -120,12 +121,13 @@ playAgainBtn.addEventListener("click",()=>{
     wrongLetters.splice(0);
 
         selectedWord=words[Math.floor(Math.random()*words.length)];
+        console.log(selectedWord);
     displayWord();
     updateWrongLettersEl();
 
     popup.style.display="none";
 });
-defineWords();
+
 //Show hidden word
 function displayWord(){
     wordEl.innerHTML=`
@@ -145,3 +147,10 @@ function displayWord(){
     }
     console.log(innerWord);
 }
+
+defineWords();
+
+
+
+
+
