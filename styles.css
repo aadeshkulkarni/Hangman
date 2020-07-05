@@ -19,6 +19,10 @@ h1{
 }
 
 .game-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
     padding:20px 30px;
     position:relative;
     margin:auto;
@@ -29,7 +33,7 @@ h1{
 .wrong-letters-container{
     position:absolute;
     top:20px;
-    right:20px;
+    right:20px; 
     display: flex;
     flex-direction: column;
     text-align:right;
@@ -42,10 +46,9 @@ h1{
 }
 .word{
     display:flex;
-    position:absolute;
     bottom:10px;
-    left:50%;
-    transform:translateX(-50%);
+    /* left:50%;
+    transform:translateX(-50%); */
 }
 .letter {
     border-bottom:3px solid #2980b9;
@@ -134,9 +137,22 @@ h1{
         visibility:visible;
     }
     .text-container input{
+        margin-top:10px;
         width:100%;
-        padding:8px 10px;
+        padding:10px 12px;
         border-radius:5px;
         border:1px solid #CCC;
+        font-size:24px;
     }
+
+    .word{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        /* position:absolute; */
+        bottom:10px;
+        /* left:50%;
+        transform:translateX(-50%); */
+    }
+
 }
