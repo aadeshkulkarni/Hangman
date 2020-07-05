@@ -60,7 +60,7 @@ function showNotification(){
     },2000);
 }
 
-window.addEventListener('keydown',e=>{
+window.addEventListener('keyup',e=>{
     if(e.keyCode>=65 && e.keyCode<=90){
         const letter=e.key;
         if(selectedWord.includes(letter)){
