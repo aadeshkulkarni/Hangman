@@ -1,4 +1,5 @@
 const wordEl=document.getElementById("word");
+const txtUserInput=document.getElementById("txtUserInput");
 const wrongLettersEl=document.getElementById("wrong-letters");
 const playAgainBtn=document.getElementById("play-button");
 const popup=document.getElementById("popup-container");
@@ -59,8 +60,33 @@ function showNotification(){
         notification.classList.remove('show');
     },2000);
 }
+txtUserInput.addEventListener("change",e=>{
+    
+        const letter=txtUserInput.value;
+        if(selectedWord.includes(letter)){
+            if(!correctLetters.includes(letter)){
+                correctLetters.push(letter);
+                displayWord();
+            }
+            else{
+                showNotification();
+            }
+        }
+        else{
+            if(!wrongLetters.includes(letter)){
+                wrongLetters.push(letter);
+
+                updateWrongLettersEl();
+            }
+            else{
+                showNotification();
+            }
+        }
+        txtUserInput.value="";
+});
 
 window.addEventListener('keyup',e=>{
+    if(window.innerWidth>600){
     if(e.keyCode>=65 && e.keyCode<=90){
         const letter=e.key;
         if(selectedWord.includes(letter)){
@@ -82,6 +108,7 @@ window.addEventListener('keyup',e=>{
                 showNotification();
             }
         }
+    }
     }
 });
 
