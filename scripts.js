@@ -145,8 +145,3 @@ function displayWord(){
     }
     console.log(innerWord);
 }
-
-
-
-
-
