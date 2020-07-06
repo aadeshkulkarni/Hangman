@@ -1,2 +1,4 @@
 # Hangman
-Guess the country or die!
+
+Web-app word game. 
+
