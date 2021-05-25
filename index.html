@@ -7,8 +7,47 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Hangman</h1>
-    <p>Find the hidden country - Enter a letter</p>
+    <div class="message-container" id="message-container">
+      <div class="message">
+        <h1>Playing Hangman</h1>
+        <div style="overflow-y: scroll; height: 70%; font-size: 14px">
+          <p>
+            Hangman is an old school favorite, a word game where the goal is
+            simply to find the missing word or words.
+          </p>
+          <p>
+            You will be presented with a number of blank spaces representing the
+            missing letters you need to find.
+          </p>
+          <p>
+            Use the keyboard to guess a letter (vowels will be visible as
+            hints).
+          </p>
+          <p>
+            If your chosen letter exists in the answer, then all places in the
+            answer where that letter appears will be revealed.
+          </p>
+          <p>
+            After you've revealed several letters, you may be able to guess what
+            the answer is and fill in the remaining letters.
+          </p>
+          <p style="color: maroon">
+            Be warned, every time you guess a letter wrong you loose a life and
+            the hangman begins to appear, piece by piece.
+          </p>
+          <p>
+            Solve the mystery before all the pieces appear because then the
+            hangman dies.
+          </p>
+          <p style="font-style: oblique">You win or he dies!</p>
+          <p style="font-weight: 800">
+            HINT: The word is one of world's countries.
+          </p>
+        </div>
+        <button onclick="closeWelcomeMessage()">Let's play</button>
+      </div>
+    </div>
+    <h1>HANGMAN</h1>
     <div class="wrong-letters-container">
       <div id="wrong-letters"></div>
     </div>
@@ -21,24 +60,67 @@
         <line x1="20" y1="230" x2="100" y2="230" />
 
         <!-- Head -->
-        <circle cx="140" cy="70" r="20" class="figure-part" />
+        <circle
+          cx="140"
+          cy="70"
+          r="20"
+          class="figure-part"
+          fill="black"
+          stroke="black"
+        />
 
         <!-- Body -->
-        <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+        <line
+          x1="140"
+          y1="90"
+          x2="140"
+          y2="150"
+          class="figure-part"
+          stroke="black"
+        />
 
         <!-- Arms -->
-        <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
-        <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+        <line
+          x1="140"
+          y1="120"
+          x2="120"
+          y2="100"
+          class="figure-part"
+          stroke="black"
+        />
+        <line
+          x1="140"
+          y1="120"
+          x2="160"
+          y2="100"
+          class="figure-part"
+          stroke="black"
+        />
 
         <!-- Legs -->
-        <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
-        <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+        <line
+          x1="140"
+          y1="150"
+          x2="120"
+          y2="180"
+          class="figure-part"
+          stroke="black"
+        />
+        <line
+          x1="140"
+          y1="150"
+          x2="160"
+          y2="180"
+          class="figure-part"
+          stroke="black"
+        />
       </svg>
     </div>
     <div class="word" id="word"></div>
     <div class="text-container">
       <input id="txtUserInput" type="text" placeholder="" maxlength="1" />
     </div>
+    <h1>Enter alphabet here</h1>
 
     <!-- Container for final message -->
     <div class="popup-container" id="popup-container">
