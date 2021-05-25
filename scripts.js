@@ -64,7 +64,7 @@ function showNotification() {
     notification.classList.remove("show")
   }, 2000)
 }
-txtUserInput.addEventListener("keyup", (e) => {
+txtUserInput.addEventListener("input", (e) => {
   const letter = e.target.value.slice(0, 1).toUpperCase()
   txtUserInput.value = ""
   if (selectedWord.includes(letter)) {
