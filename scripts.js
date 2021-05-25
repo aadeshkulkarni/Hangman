@@ -65,7 +65,7 @@ function showNotification() {
   }, 2000)
 }
 txtUserInput.addEventListener("keyup", (e) => {
-  const letter = e.target.value[0].toUpperCase()
+  const letter = e.target.value.slice(0, 1).toUpperCase()
   if (selectedWord.includes(letter)) {
     if (!correctLetters.includes(letter)) {
       correctLetters.push(letter)
