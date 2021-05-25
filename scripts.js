@@ -32,6 +32,8 @@ const wrongLetters = []
 // Update the wrong letters
 function updateWrongLettersEl() {
   // Display wrong letters
+  console.log(wrongLetters)
+  wrongLettersEl.innerHTML = ""
   wrongLettersEl.innerHTML = `
         ${wrongLetters.length > 0 ? "<span>Wrong: </span>" : ""}
         ${wrongLetters.map((letter) => `<span>${letter}</span>`)}
