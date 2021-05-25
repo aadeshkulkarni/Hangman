@@ -66,6 +66,7 @@ function showNotification() {
 }
 txtUserInput.addEventListener("keyup", (e) => {
   const letter = e.target.value.slice(0, 1).toUpperCase()
+  txtUserInput.value = ""
   if (selectedWord.includes(letter)) {
     if (!correctLetters.includes(letter)) {
       correctLetters.push(letter)
@@ -82,7 +83,6 @@ txtUserInput.addEventListener("keyup", (e) => {
       showNotification()
     }
   }
-  txtUserInput.value = ""
 })
 
 // window.addEventListener("keyup", (e) => {
