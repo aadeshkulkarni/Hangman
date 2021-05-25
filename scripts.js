@@ -4,6 +4,8 @@ const wrongLettersEl = document.getElementById("wrong-letters")
 const playAgainBtn = document.getElementById("play-button")
 const popup = document.getElementById("popup-container")
 const notification = document.getElementById("notification-container")
+const messageContainer = document.getElementById("message-container")
+
 const finalMessage = document.getElementById("final-message")
 
 const figureParts = document.querySelectorAll(".figure-part")
@@ -24,6 +26,10 @@ function defineWords() {
       tempSelectedWord = selectedWord.replaceAll(" ", "")
       displayWord()
     })
+}
+
+function closeWelcomeMessage(e) {
+  messageContainer.style.display = "none"
 }
 const defaultLetters = ["A", "E", "I", "O", "U", "(", ")", ",", "-", "*"]
 let correctLetters = ["A", "E", "I", "O", "U", "(", ")", ",", "-", "*"]
@@ -51,7 +57,7 @@ function updateWrongLettersEl() {
   })
   //Check if lost
   if (wrongLetters.length === figureParts.length) {
-    finalMessage.innerText = `Unfortunately, You lost. ${selectedWord} was the country we were looking for  `
+    finalMessage.innerText = `HANGED! \n ${selectedWord} was the country we were looking for. `
     popup.style.display = "flex"
   }
 }
@@ -65,7 +71,6 @@ function showNotification() {
   }, 2000)
 }
 txtUserInput.addEventListener("keydown", (e) => {
-  e.preventDefault()
   const letter = e.target.value.slice(0, 1).toUpperCase()
   txtUserInput.value = letter
 })
