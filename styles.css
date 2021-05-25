@@ -37,12 +37,17 @@ p {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
-
+button:active,
+button:hover,
+button:focus {
+  background: rgba(0, 0, 0, 0.5);
+}
 .wrong-letters-container {
   top: 20px;
   color: #07123a;
   right: 20px;
   text-align: right;
+  margin-top: 10px;
 }
 .wrong-letters-container span {
   font-size: 24px;
@@ -117,6 +122,7 @@ p {
   margin-top: 20px;
   padding: 12px 20px;
   font-size: 16px;
+  border-radius: 10px;
 }
 
 .popup button:active {
@@ -188,4 +194,44 @@ p {
     /* left:50%;
         transform:translateX(-50%); */
   }
+}
+
+.message-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: display 5s linear;
+}
+.message-container .message {
+  width: 90%;
+  height: 90%;
+  background: #fff;
+  color: #222;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 10px;
+}
+
+.message-container .message button {
+  cursor: pointer;
+  color: #fff;
+  background-color: #2980b9;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 16px 20px;
+  font-size: 16px;
+  width: 95%;
 }
